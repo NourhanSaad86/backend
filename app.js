@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
@@ -132,10 +134,11 @@ app.post("/api/enroll", async (req, res) => {
   }
 });
 
+
 // Connect to MongoDB and Start Server
 const startServer = async () => {
   try {
-    await mongoose.connect("mongodb://localhost:27017/students_data", {
+    await mongoose.connect(process.env.MONGODB_URL, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
