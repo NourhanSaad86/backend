@@ -1,7 +1,7 @@
 {
-  "scripts": {
-    "start": "node app.js"
-  },
+  //"scripts": {
+    //"start": "node app.js"
+  //},
   "dependencies": {
     "body-parser": "^1.20.3",
     "canvas": "^2.11.2",
